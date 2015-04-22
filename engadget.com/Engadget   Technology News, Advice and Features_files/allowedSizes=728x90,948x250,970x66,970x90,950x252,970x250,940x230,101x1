@@ -1,0 +1,10 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"417596|2\";\n");
+document.write("*-->\n");
+document.write("<!-- *\n");
+document.write("AOL - HTML - Blank HTML Ad\n");
+document.write("* -->\n");
+
+
+
+

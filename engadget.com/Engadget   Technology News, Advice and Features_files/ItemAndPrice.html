@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://secure-ads.pictela.net/rm/ads/121049/2857/ItemAndPrice.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>Item &amp; Price Responsive App</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta charset="utf-8">  
+<style>
+body, html {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+body, p, div, input, select, textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.appWrapper {
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+custom scrollbar for chrome, iOS
+commented-out for now since it is not interactive on iOS.
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #CCC;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+} 
+*/
+.primaryButton, .secondaryButton, .textOnlyButton {
+  border: 1px solid #00A;
+  border-color: #003366;
+  border-radius:3px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  line-height: 18px;
+
+  margin: 0;
+  padding: 0px 4px;
+
+  vertical-align: top;
+
+  cursor: pointer;
+
+  height: 20px;
+}
+
+.primaryButton .buttonIcon, .secondaryButton .buttonIcon {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.primaryButton .buttonLabel, .secondaryButton .buttonLabel {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.primaryButton {
+  color: #FFF;
+  color: /*var=buttonTextColor*/;
+  color: /*var=primaryButtonTextColor*/;
+  background-color: #00A;
+  background-color: #003366;
+}
+
+.secondaryButton {
+  background-color: #FFF;
+  color: #00D;
+  color: #003366;
+  color: /*var=primaryButtonTextColor*/;
+  color: /*var=secondaryButtonTextColor*/;
+}
+
+.textOnlyButton {
+  background: none;
+  border: none;
+  color: #00D;
+  color: #003366;
+  color: /*var=primaryButtonTextColor*/;
+  color: /*var=secondaryButtonTextColor*/;
+}
+
+.primaryButton:focus, .secondaryButton:focus, .textOnlyButton:focus {
+  outline: none;
+}
+
+.BackButton, .NextButton {
+  border: 0;
+  background: none;
+
+  width: 30px;
+
+  font-weight: bold;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.backButtonIcon, .nextButtonIcon {
+  height: 14px;
+  color: #999;
+}
+.CloseButton {
+  border: 0;
+  background: none;
+
+  width: 30px;
+  height: 30px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.closeButtonIcon {
+  width: 12px;
+  height: 12px;
+  color: #999;
+}
+.ExpandButton {
+  border: 0;
+  background: none;
+
+  outline: none;
+
+  padding: 0px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+
+.expandIcon {
+  width: 10px;
+  height: 10px;
+  color: #999;
+
+  pointer-events: none;
+}
+.modalDialogLightbox {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modalDialogTitleBar, .modalDialogContents {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-color: #DDD;
+
+  
+}
+
+.modalDialogTitleBarLabel {
+  color: #F00;
+  color: #003366;
+  color: #003366;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  font-weight: bold;
+
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+}
+.emailDialogMessage {
+  background-color: #DDD;
+  background-color: #DDD;
+
+  border-radius: 3px;
+
+  padding: 4px;
+
+  color: #999;
+  font-size: 8pt;
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center;
+}
+.infoBox {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.infoBoxBackgroundHorizontal, .infoBoxBackgroundVertical {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
+  
+  border-left: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  
+  border-left-color: #DDD;
+  border-top-color: #DDD;
+}
+
+.infoBoxBackgroundVertical {
+  border-left: none;
+}
+
+.infoBoxBackgroundHorizontal {
+  border-top: none;
+}
+
+.infoBoxTextArea {
+  overflow: hidden;
+}
+
+.infoBoxTitle, .infoBoxPrice, .infoBoxDescription {
+  font: 12px sans-serif;
+  line-height: 14px;
+  color: #333;
+
+  /* add ellipsis in webkit */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  cursor: default;
+
+  pointer-events: none;
+}
+
+.infoBoxTitle {
+  font-weight: bold;
+}
+.ListView {
+
+}
+
+.listViewWindow {
+  background-color: #FFF;
+}
+
+.ListHeader {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  cursor: default;
+}
+
+.listHeaderTitle {
+  color: #F00;
+  color: #003366;
+  color: #003366;
+
+  font-size: 9pt;
+  font-weight: bold;
+
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.listHeaderIcon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+
+.listHeaderLabel {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.listViewLightbox {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+input, select, textarea {
+  font-size: 8pt;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+.selectInput {
+  height: 20px;
+  -webkit-appearance: menulist-button;
+
+  border-radius: 3px;
+  border: 0px;
+  background: #CCC;
+  color: #333;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+
+
+
+.selectInputCustom {
+  /* width is set during place() */
+  height: 20px;
+
+  border-radius: 3px;
+  border: 0px;
+  color: #333;
+
+  background: #CCC url(dropdown-arrow@2x.png) no-repeat 100% 50%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoBAMAAABk7EXQAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAeUExURczMzAAAAFRUVLCwsG9vbxwcHHx8fJKSksPDw2JiYghVlaYAAAA5SURBVCjPY2AYBbQA7EpgoNmAJOYoCALByMpYQCKiBihaHdEVgZWhKQIpC0a3lAVDEQND8mhcYAMAxLwFdl/yq9YAAAAASUVORK5CYII=);
+  background-size: 18px 20px;
+
+  font-size: 8pt;
+
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selectInputCustomSelectedLabelContainer {
+  height: 20px;
+
+  /* prevent iOS tap color */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.selectInputCustomSelectedLabel {
+  /* width is set during place() */
+  white-space: nowrap;
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.selectInputCustomDropdown {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
+.selectInputCustomDropdown::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.selectInputCustomOption, 
+.selectInputCustomOptionHover,
+.selectInputCustomOptionSelected {
+  padding: 3px 5px;
+  border-top: 1px solid #CCC;
+}
+
+.selectInputCustomDropdown .selectInputCustomOption:first-child, 
+.selectInputCustomDropdown .selectInputCustomOptionHover:first-child, 
+.selectInputCustomDropdown .selectInputCustomOptionSelected:first-child {
+  border-top: 0;
+}
+
+.selectInputCustomOptionHover {
+  background-color: #EEE;
+}
+
+.selectInputCustomOptionSelected {
+  background-color: #CCC;
+  color: #333;
+}
+.emailInput, .emailInputError {
+  height: 18px;
+
+  color: #999;
+
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  border-color: #DDD;
+
+  padding: 0 4px;
+
+  /* hide inner shadow on iOS */
+  -webkit-appearance: none;
+}
+
+.emailInput:focus, .emailInputError:focus {
+  outline: none;
+}
+
+.emailInputError {
+  color: #F00;
+  border: 1px solid #F00;
+}
+.locationInput, .locationInputError {
+  width: 75px;
+  height: 18px;
+
+  color: #999;
+
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  border-color: #DDD;
+
+  padding: 0;
+  padding-left: 20px;
+
+  /* hide inner shadow on iOS */
+  -webkit-appearance: none;
+}
+
+.locationInput:focus, .locationInputError:focus {
+  outline: none;
+}
+
+.locationInputError {
+  color: #F00;
+  border: 1px solid #F00;
+}
+
+.locationInputIcon {
+  pointer-events: none;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 4px;
+  left: 6px;
+  color: #999;
+}
+.TileScrollPane {
+  border-top: 1px solid #DDD;
+  border-top-color: #DDD;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* do not use this - we're using a jquery plugin now, since this doesn't work in the context of the pictela templates
+  -webkit-overflow-scrolling: touch; */
+
+  /* prevent iOS tap color */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.tilesContainer {
+  position: relative;
+}
+.TileScrollPane.inMraid {
+  overflow-y:hidden !important; 
+}
+.ProductInfoBoxScrollPane {
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  border-color: #DDD;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* do not use this - we're using a jquery plugin now:
+  -webkit-overflow-scrolling: touch;
+  */
+}
+
+
+.ProductInfoBoxScrollPane .infoBoxes .infoBox:first-child .infoBoxBackgroundVertical {
+  border-top: none;
+}
+
+.ProductInfoBoxScrollPane .infoBoxBackgroundVertical {
+  border-bottom: 1px solid #DDD;
+  border-color: #DDD;
+}
+
+.ProductInfoBoxScrollPane .infoBoxBackgroundHorizontal {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  border-color: #DDD;
+}
+
+.productInfoBoxScrollPaneEmptyMessage {
+  font-size: 11.5pt;
+  color: #999;
+  padding: 10px;
+}
+.facebookButton, .twitterButton, .pinterestButton {
+  border: none;
+  background: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.facebookButton:focus, .twitterButton:focus, .pinterestButton:focus {
+  outline: none;
+}
+
+.facebookButton {
+  /* vector-icons/facebook_40x40@2x.png */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAF3UExURTpWnTtWnTpXnDtWnThVoDpWnDpXnDpYnDtXnAAAADpWnTtXnDtWnTtXnf///2B3sHSIuj1Ynvv8/fHz+EJdoU1npuzv9b7H37C82D1ZnpKiyTxYnk9opz9an8TN4jxXnVtyrb3G3vz9/XOHuVNrqf39/kBboPL0+E1mpq6610FcoLG92ICSwGh+tHCEt8/W57fB29HX6Exmps7V50BcoKOw0cTO4svT5ZalysLM4ert9Ky41r7I32F4sJWkyrW/21FqqVRtqoGTwcrR5Ons9LzF3mp/tIKUwdDX6Gp/tZSjyUVgopGhyPb3+m+Et6+618nQ5UZgovz9/vf4/Ovu9fr7/XWJuqKv0FBpqPz8/WZ8s/T2+WyBtp2rzu/y91hwrMfO4+7w95aly2d9tPv7/fDy90Vfokdio5CgyHmNvfT2+vX2+qWy0mF3sNrg7ezv9kNeoURfoT9bn9bc68jQ5D5an6m11DxYneLm8F11r192sHOHum+EuI3gUIAAAAANdFJOU+uf6uMb4u8angCio+X6WYiPAAABnElEQVRYw+3ZB0vDQBQH8Ki1Q32naeuodre2de+999577733/PBGEuzVpsZLHwhyfwiEl+PHXQgvcCdYTOZUQIqQYrAIpnRATJpBMANqMgQBFzQie9J75CAH1VIUV6lPBhSlyzV43NZeV1PV5PZVlzQ0VyQzQxdA5HyHxKRFP/j0APBIvqdMP+gC53OcRwp0gyGIFBNE0AEQJpggwD3BBEUIEII7wztkMEiQwY0EYKNecDjWcS+NjhdK6azUC7bSXL83+qBUH1hLf9TWZQBPku3LS09wSqWLsYIdNDiEAGbT4CJCx44BA9hgDgf/DnREb3tocCTBIO0Zhg7tcmCVBk9AKduvb26Zltx1apNzsEaDE5tK2RY+u2ACp4lmgkxgvqZ35UAGLwEZ9GGDu9hgOTa4jg1uIYNzY2zgthY4z9htBvxWOfsrNDO7oJT9fYzgkTNXDkzSYC8oZeeM7vbVTYN76s2L/wI4yEEOcpCDHPzfoIALGhm27n8FZjIcLrzS4Jv6mCyDIB1//LBqj/gVeMmj8g4iFWX/4fP44wO43mWl+2P8owAAAABJRU5ErkJggg==);
+}
+.twitterButton {
+  /* vector-icons/twitter_40x40@2x.png */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAGzUExURVSs7VWr7VWs7VWr7lWq7FSr7lWr7VWs7Viw6wAAAFWr7VSr7lSs7VWs7v////b7/ur1/ez2/ZzP9d7v/G248Ljc+OTy/Fit7n7A8vr9/2Cx72a08P7+/3C58djs+/T6/las7ny/8oDB8tzu+3W88ZPK9Lze+Gi18P7//3K68Y7I9GSz75/Q9e73/Viu7vH4/ozH86nV9qzX9+v1/ZbM9LXb+PD4/qTT9ovG81at7my38L3f+NDo+lyv7/P5/mu38Ha88Z7Q9abU9snl+tXq+2W08JHJ9KjU9u/3/YXD82Cy7/D4/dHp+oHB8mKz7+n0/fL5/q/Y99Pq+8vm+uj0/V6w75TL9NLp+rTa94TD89Tq+/b6/o/I9KDQ9ebz/Fuv7/z9/8bj+crl+q7X98Ti+aXT9rPa912w74zH9LDZ91mu7tvt+2Oz7/j8/uXy/Fqu7rve+Pf7/oPC857P9e32/eLx/Fqv78Pi+W648LHZ95DJ9L/g+c7n+l+x7/j7/vv9/5bM9ePx/JfM9b7f+ZLK9N/v/H3A8mKy78/o+l6x72m28MHh+Wq28JvO9abT9qLR9nS78blxSi4AAAANdFJOU+vv6uMb4p+eGgCi5aPKoJXqAAACMElEQVRYw+3ZV1caQRQA4DUhUUx2WDrSUSJNBFRiwYIoIMb0bjfFaHrviT3GGn+yi4AH3AHubOacPGTuAw/3zHyHmd2dubvDKetqT/GUgjurUHJ1Z3iKcVrB1fJUo57j6II1lD1xHhnIQAYy8H8AG6NN11RXb2quFBLbzr8BfXdRPlSPjxIHw2kIOGAPYL0uVBS/t3b3xhAahQz5HXrZjfHuo5JwZH8yoDnsRejZK0n29iySRIrnXdVBp1psaug5mdZLuEua5J+R/epgnyrbusFfmn3ilYJ2hMYAQ27tz7VvninOLiBcDIHm8EO+dXtHUfIhztuB3dhrxx20d4yFZDPGSwCflF9FfdT3TLnkPAbsgz56GyXdhEctJk9rCwb0QcEBSVfviBoD6mDg5ihvUyFANJhhYE9/LD7oAIACdPmyitfiJwAchoK9CBZ6KLgOBC+AV+wQDLSAQRPI0xLsKZ0QsJNkkxoEgAGiXe9HVLBW9uaIttG4xby6UhnUEYHL4oO1VNF7QLjRC9VmMEkI2qp4CeJSpKuiZ5BR22QulvesHjnFknnxfTnwsszqy2jzC/BVAVR9RXBLt0Zuffg88gL3/1LyCs6Pb1+/wXHTbtIK1pXu+Kr58r3MNdYbiUviz9/K3y72Rlk1tqWtHcvdCMsu2rvDn4In1+c2N8/LBsV46pqKjRuCjonQraah65M69ibFQAYykIH/HKT+YZzyp/vzlA8Xzik48fiD2qizxx+HlGtympU7mbwAAAAASUVORK5CYII=);
+}
+.pinterestButton {
+  /* vector-icons/pinterest_40x40@2x.png */
+  background-image: url(data:image/png;base64,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);
+}
+.tile, .tileSelected {
+  /* prevent iOS tap color */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.tile {
+  background-color: #DDD;
+  background-color: #DDD;
+}
+
+.tileSelected {
+  background-color: #F00;
+  background-color: #003366;
+  background-color: #003366;
+}
+
+.tileImage {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-color: #FFF;
+
+  pointer-events: none;
+}
+
+.tileLabel {
+  background-color: #F00;
+  background-color: #003366;
+  background-color: #003366;
+
+  color: #FFF;
+  font: 10px sans-serif;
+  right: 0px;
+  bottom: 0px;
+  padding: 2px 4px;
+  text-align: center;
+  
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  line-height: 12px;
+  max-width: 70px;
+  max-height: 25px;
+
+  /* add ellipsis in webkit */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+.ItemAndPriceAppView {
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.ItemAndPriceHeader {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+</style>  <script src="TweenMax.min.js"></script>  <script src="jquery.min.js"></script>  <script>
+var loadAdtech = function() {
+  document.write('<scri'+'pt src="//ads.pictela.com/jsapi/ADTECH.js"></scri'+'pt>');
+};
+
+try {
+  if (parent.ADTECH) {
+    var ADTECH = parent.ADTECH;
+  } else {
+    loadAdtech();
+  }
+} catch (ex) {
+  loadAdtech();
+}
+</script>  <script src="ItemAndPrice.js"></script>   </head>  <body> <script>
+var itemAndPriceApp = new AOLCT.ItemAndPriceApp();
+
+function initInertialScroller() {
+  /**
+   * jQuery Inertial Scroller v1.5
+   * (c)2013 hnldesign.nl
+   * This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+   **/
+  /*jslint browser: true*/
+  /*global $, jQuery*/
+  /* SETTINGS */
+  var i_v = {
+      i_touchlistener     : '.inertialScroll',         // element to monitor for touches, set to null to use document. Otherwise use quotes. Eg. '.myElement'. Note: if the finger leaves this listener while still touching, movement is stopped.
+      i_scrollElement     : '.inertialScroll',         // element (class) to be scrolled on touch movement
+      i_duration          : window.innerHeight * 1.5, // (ms) duration of the inertial scrolling simulation. Devices with larger screens take longer durations (phone vs tablet is around 500ms vs 1500ms). This is a fixed value and does not influence speed and amount of momentum.
+      i_speedLimit        : 1.2,                      // set maximum speed. Higher values will allow faster scroll (which comes down to a bigger offset for the duration of the momentum scroll) note: touch motion determines actual speed, this is just a limit.
+      i_handleY           : true,                     // should scroller handle vertical movement on element?
+      i_handleX           : true,                     // should scroller handle horizontal movement on element?
+      i_moveThreshold     : 100,                      // (ms) determines if a swipe occurred: time between last updated movement @ touchmove and time @ touchend, if smaller than this value, trigger inertial scrolling
+      i_offsetThreshold   : 30,                       // (px) determines, together with i_moveThreshold if a swipe occurred: if calculated offset is above this threshold
+      i_startThreshold    : 5,                        // (px) how many pixels finger needs to move before a direction (horizontal or vertical) is chosen. This will make the direction detection more accurate, but can introduce a delay when starting the swipe if set too high
+      i_acceleration      : 0.5,                      // increase the multiplier by this value, each time the user swipes again when still scrolling. The multiplier is used to multiply the offset. Set to 0 to disable.
+      i_accelerationT     : 300                       // (ms) time between successive swipes that determines if the multiplier is increased (if lower than this value)
+  };
+  /* stop editing here */
+  //set some required vars
+  i_v.i_time  = {};
+  i_v.i_elem  = null;
+  i_v.i_elemH = null;
+  i_v.i_elemW = null;
+  i_v.multiplier = 1;
+  // Define easing function. This is based on a quartic 'out' curve. You can generate your own at http://www.timotheegroleau.com/Flash/experiments/easing_function_generator.htm
+  if ($.easing.hnlInertial === undefined) {
+      $.easing.hnlInertial = function (x, t, b, c, d) {
+          "use strict";
+          var ts = (t /= d) * t, tc = ts * t;
+          return b + c * (-1 * ts * ts + 4 * tc + -6 * ts + 4 * t);
+      };
+  }
+  $(i_v.i_touchlistener || document)
+      .on('touchstart touchmove touchend', function (e) {
+          "use strict";
+          //prevent default scrolling
+          e.preventDefault();
+          //store timeStamp for this event
+          i_v.i_time[e.type]  = e.timeStamp;
+      })
+      .on('touchstart', function (e) {
+          "use strict";
+          this.tarElem = $(e.target);
+          this.elemNew = this.tarElem.closest(i_v.i_scrollElement).length > 0 ? this.tarElem.closest(i_v.i_scrollElement) : $(i_v.i_scrollElement).eq(0);
+          //dupecheck, optimizes code a bit for when the element selected is still the same as last time
+          this.sameElement = i_v.i_elem ? i_v.i_elem[0] == this.elemNew[0] : false;
+          //no need to redo these if element is unchanged
+          if (!this.sameElement) {
+              //set the element to scroll
+              i_v.i_elem = this.elemNew;
+              //get dimensions
+              i_v.i_elemH = i_v.i_elem.innerHeight();
+              i_v.i_elemW = i_v.i_elem.innerWidth();
+              //check element for applicable overflows and reevaluate settings
+              this.i_scrollableY      = !!((i_v.i_elemH < i_v.i_elem.prop('scrollHeight') && i_v.i_handleY));
+              this.i_scrollableX    = !!((i_v.i_elemW < i_v.i_elem.prop('scrollWidth') && i_v.i_handleX));
+          }
+          //get coordinates of touch event
+          this.pageY      = e.originalEvent.touches[0].pageY;
+          this.pageX      = e.originalEvent.touches[0].pageX;
+          if (i_v.i_elem.is(':animated') && (i_v.i_time.touchstart - i_v.i_time.touchend) < i_v.i_accelerationT) {
+              //user swiped while still animating, increase the multiplier for the offset
+              i_v.multiplier += i_v.i_acceleration;
+          } else {
+              //else reset multiplier
+              i_v.multiplier = 1;
+          }
+          i_v.i_elem
+              //stop any animations still running on element (this enables 'tap to stop')
+              .stop(true, false)
+              //store current scroll positions of element
+              .data('scrollTop', i_v.i_elem.scrollTop())
+              .data('scrollLeft', i_v.i_elem.scrollLeft());
+      })
+      .on('touchmove', function (e) {
+          "use strict";
+          //check if startThreshold is met
+          this.go = (Math.abs(this.pageX - e.originalEvent.touches[0].pageX) > i_v.i_startThreshold || Math.abs(this.pageY - e.originalEvent.touches[0].pageY) > i_v.i_startThreshold);
+      })
+      .on('touchmove touchend', function (e) {
+          "use strict";
+          //check if startThreshold is met
+          if (this.go) {
+              //set animpar1 to be array
+              this.animPar1 = {};
+              //handle events
+              switch (e.type) {
+              case 'touchmove':
+                  this.vertical       = Math.abs(this.pageX - e.originalEvent.touches[0].pageX) < Math.abs(this.pageY - e.originalEvent.touches[0].pageY); //find out in which direction we are scrolling
+                  this.distance       = this.vertical ? this.pageY - e.originalEvent.touches[0].pageY : this.pageX - e.originalEvent.touches[0].pageX; //determine distance between touches
+                  this.acc            = Math.abs(this.distance / (i_v.i_time.touchmove - i_v.i_time.touchstart)); //calculate acceleration during movement (crucial)
+                  //determine which property to animate, reset animProp first for when no criteria is matched
+                  this.animProp       = null;
+                  if (this.vertical && this.i_scrollableY) { this.animProp = 'scrollTop'; } else if (!this.vertical && this.i_scrollableX) { this.animProp = 'scrollLeft'; }
+                  //set animation parameters
+                  if (this.animProp) { this.animPar1[this.animProp] = i_v.i_elem.data(this.animProp) + this.distance; }
+                  this.animPar2       = { duration: 0 };
+                  break;
+              case 'touchend':
+                  this.touchTime      = i_v.i_time.touchend - i_v.i_time.touchmove; //calculate touchtime: the time between release and last movement
+                  this.i_maxOffset    = (this.vertical ? i_v.i_elemH : i_v.i_elemW) * i_v.i_speedLimit; //(re)calculate max offset
+                  //calculate the offset (the extra pixels for the momentum effect
+                  this.offset         = Math.pow(this.acc, 2) * (this.vertical ? i_v.i_elemH : i_v.i_elemW);
+                  this.offset         = (this.offset > this.i_maxOffset) ? this.i_maxOffset : this.offset;
+                  this.offset         = (this.distance < 0) ? -i_v.multiplier * this.offset : i_v.multiplier * this.offset;
+                  //if the touchtime is low enough, the offset is not null and the offset is above the offsetThreshold, (re)set the animation parameters to include momentum
+                  if ((this.touchTime < i_v.i_moveThreshold) && this.offset !== 0 && Math.abs(this.offset) > (i_v.i_offsetThreshold)) {
+                      if (this.animProp) { this.animPar1[this.animProp] = i_v.i_elem.data(this.animProp) + this.distance + this.offset; }
+                      this.animPar2   = { duration: i_v.i_duration, easing : 'hnlInertial', complete: function () {
+                          //reset multiplier
+                          i_v.multiplier = 1;
+                      }};
+                  }
+                  break;
+              }
+              // run the animation on the element
+              if ((this.i_scrollableY || this.i_scrollableX) && this.animProp) {
+                  i_v.i_elem.stop(true, false).animate(this.animPar1, this.animPar2);
+              }
+          }
+      });
+}
+</script><div class="appWrapper" id="appWrapper" style="position: absolute;"><div class="ItemAndPriceAppView" style="position: absolute;"><div class="TileScrollPane inertialScroll" style="position: absolute; display: block; overflow-y: hidden; overflow-x: scroll; height: 225px; width: 653px; transform: matrix(1, 0, 0, 1, 0, 25);"><div class="tileContainer" style="position: absolute; height: auto; width: 1858.57142857143px;"><div class="tileSelected" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 0, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x353.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/3716/3716028_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px) scale(0.980582524271845, 0.980582524271845); display: block; background-image: url(https://secure-ads.pictela.net/a/proxy/image-500x353.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/3716/3716028_sa.jpg);"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$299.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 209, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x383.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/8825/8825037_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); display: block; background-image: url(https://secure-ads.pictela.net/a/proxy/image-500x383.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/8825/8825037_sa.jpg);"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$649.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 418, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x333.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/2125/2125035_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); display: block; background-image: url(https://secure-ads.pictela.net/a/proxy/image-500x333.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/2125/2125035_sa.jpg);"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$249.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 627, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x309.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/4323/4323036_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); display: block; background-image: url(https://secure-ads.pictela.net/a/proxy/image-500x309.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/4323/4323036_sa.jpg);"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$1199.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 836, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x428.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/2445/2445015_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); background-image: none;"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$90.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 1045, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x127.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/3147/3147057_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); background-image: none;"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$79.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 1254, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x309.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/4324/4324008_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); background-image: none;"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$1299.99</div></div><div class="tile" style="position: absolute; cursor: pointer; height: 206px; width: 206px; transform: matrix(1, 0, 0, 1, 1463, 3); display: block;"><div class="tileImage lazy" data-original="https://secure-ads.pictela.net/a/proxy/image-500x309.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/4376/4376023_sa.jpg" style="position: absolute; height: 204px; width: 204px; transform: translate3d(1px, 1px, 0px); background-image: none;"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: visible;">$1499.99</div></div></div></div><div class="infoBox" style="position: absolute; height: 209px; width: 186.571428571429px; transform: matrix(1, 0, 0, 1, 467, 26);"><div class="infoBoxBackgroundHorizontal" style="position: absolute; z-index: -1; width: 186.571428571429px; height: 209px;"><button class="ExpandButton" style="position: absolute; visibility: hidden; transform: matrix(1, 0, 0, 1, 167, 0);"><svg style="fill: currentcolor; transform: matrix(0, -1, 1, 0, 0, 0);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve" class="expandIcon"><path d="M6.8,10V5H10L7.3,2.3L5,0L2.7,2.3L0,5h3.2v5H6.8"></path></svg></button><div class="tile" style="position: absolute; display: block; height: 50px; width: 50px; transform: matrix(1, 0, 0, 1, 10, 10);"><div class="tileImage" style="position: absolute; height: 48px; width: 48px; transform: translate3d(1px, 1px, 0px); background-image: url(https://secure-ads.pictela.net/a/proxy/image-500x353.jpg?&amp;url=http://img.bbystatic.com/BestBuy_US/images/products/3716/3716028_sa.jpg);"></div><div class="tileLabel" style="position: absolute; transform: translate3d(0px, 0px, 1px); visibility: hidden;"></div></div><div class="infoBoxTextArea" style="position: absolute; height: 109px; width: 166.571428571429px; transform: matrix(1, 0, 0, 1, 10, 65);"><div class="infoBoxTitle" style="position: absolute; visibility: visible; width: 166.571428571429px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; max-height: 42px; -webkit-line-clamp: 3;">Samsung - Galaxy Tab Pro 10.1 - 16GB - Black</div><div class="infoBoxPrice" style="position: absolute; visibility: visible; width: 166.571428571429px; transform: matrix(1, 0, 0, 1, 0, 29); display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; max-height: 28px; -webkit-line-clamp: 2;">$299.99 (SAVE $100)</div><div class="infoBoxDescription" style="position: absolute; visibility: visible;"></div><button class="primaryButton" style="position: absolute; opacity: 1; cursor: pointer; transform: matrix(1, 0, 0, 1, 0, 46);"><span class="buttonLabel">BUY NOW</span></button></div></div><div class="infoBoxBottomButtons" style="position: absolute; width: 165.571428571429px; transform: matrix(1, 0, 0, 1, 11, 179);"><button class="primaryButton" style="position: absolute; opacity: 1; cursor: pointer; visibility: hidden;"><span class="buttonLabel">BUY NOW</span></button><button class="secondaryButton" style="position: absolute; opacity: 1; cursor: pointer;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 5" enable-background="new 0 0 6 5" xml:space="preserve" class="buttonIcon"><path d="M5.1,0.1C4.3-0.2,3.3,0.1,3,0.8C2.6,0.1,1.6-0.2,0.9,0.1C0.1,0.5-0.3,1.4,0.3,2.5C0.8,3.3,1.6,3.9,3,5c1.4-1.1,2.2-1.7,2.7-2.5C6.3,1.4,5.9,0.5,5.1,0.1z"></path></svg><span class="buttonLabel">Add</span></button><button class="secondaryButton" style="position: absolute; visibility: hidden; opacity: 1; cursor: pointer;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 5" enable-background="new 0 0 6 5" xml:space="preserve" class="buttonIcon"><path d="M5.1,0.1C4.3-0.2,3.3,0.1,3,0.8C2.6,0.1,1.6-0.2,0.9,0.1C0.1,0.5-0.3,1.4,0.3,2.5C0.8,3.3,1.6,3.9,3,5c1.4-1.1,2.2-1.7,2.7-2.5C6.3,1.4,5.9,0.5,5.1,0.1z"></path></svg><span class="buttonLabel">Remove</span></button><button class="secondaryButton" style="position: absolute; opacity: 1; cursor: pointer; transform: matrix(1, 0, 0, 1, 49, 0); visibility: hidden;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 10" enable-background="new 0 0 12 10" xml:space="preserve" class="buttonIcon"><g><g><g><g><g><path d="M8.4,10H1.2C0.5,10,0,9.4,0,8.7V2.1c0-0.7,0.5-1.3,1.2-1.3h6.9l-3,1.3H1.2v6.6h7.2V7.8l1.2-0.9v1.9 C9.6,9.4,9.1,10,8.4,10z"></path></g></g></g></g><g><g><g><g><path d="M8.4,6.8v-2c-2.9,0-5,1.7-5,1.7s0.3-3.7,5-4.6V0L12,3.4l-1.8,1.7L8.4,6.8z"></path></g></g></g></g></g></svg><span class="buttonLabel">Share</span></button><button class="facebookButton" style="position: absolute; opacity: 1; cursor: pointer; height: 20px; width: 20px; transform: matrix(1, 0, 0, 1, 49, 0);"></button><button class="twitterButton" style="position: absolute; opacity: 1; cursor: pointer; height: 20px; width: 20px; transform: matrix(1, 0, 0, 1, 73, 0);"></button><button class="pinterestButton" style="position: absolute; opacity: 1; cursor: pointer; height: 20px; width: 20px; transform: matrix(1, 0, 0, 1, 97, 0);"></button></div></div><div class="ItemAndPriceHeader" style="position: absolute; height: 25px; width: 653px;"><div class="selectInputCustom" style="position: absolute; width: 160px;"><div class="selectInputCustomSelectedLabelContainer" style="position: absolute; width: 160px;"><div class="selectInputCustomSelectedLabel" style="position: absolute; width: 135px; transform: matrix(1, 0, 0, 1, 6, 4);">Best Deals of the Week</div></div><div class="selectInputCustomDropdown inertialScroll" style="position: absolute; height: 142px; width: 158px;"><div class="selectInputCustomDropdownItems" style="width: 100%;"><div class="selectInputCustomOptionSelected" value="0">Best Deals of the Week</div><div class="selectInputCustomOption" value="1">Home Theater</div><div class="selectInputCustomOption" value="2">Computing</div><div class="selectInputCustomOption" value="3">Appliances</div></div></div></div><button class="primaryButton" style="position: absolute; transform: matrix(1, 0, 0, 1, 589, 0);"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 5" enable-background="new 0 0 6 5" xml:space="preserve" class="buttonIcon"><path d="M5.1,0.1C4.3-0.2,3.3,0.1,3,0.8C2.6,0.1,1.6-0.2,0.9,0.1C0.1,0.5-0.3,1.4,0.3,2.5C0.8,3.3,1.6,3.9,3,5c1.4-1.1,2.2-1.7,2.7-2.5C6.3,1.4,5.9,0.5,5.1,0.1z"></path></svg><span class="buttonLabel">LIST (0)</span></button></div></div><div class="ListView" style="position: absolute; display: none;"><div class="listViewLightbox" style="position: absolute; display: none; height: 250px; width: 653px;"></div><div class="listViewWindow" style="position: absolute; display: none; height: 250px; width: 653px;"><div class="ListHeader" style="position: absolute; display: none; height: 25px; width: 653px;"><div class="listHeaderTitle" style="position: absolute;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 5" enable-background="new 0 0 6 5" xml:space="preserve" class="listHeaderIcon"><path d="M5.1,0.1C4.3-0.2,3.3,0.1,3,0.8C2.6,0.1,1.6-0.2,0.9,0.1C0.1,0.5-0.3,1.4,0.3,2.5C0.8,3.3,1.6,3.9,3,5c1.4-1.1,2.2-1.7,2.7-2.5C6.3,1.4,5.9,0.5,5.1,0.1z"></path></svg><div class="listHeaderLabel"></div></div><button class="BackButton" style="position: absolute;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 13" enable-background="new 0 0 8 13" xml:space="preserve" class="backButtonIcon"><polygon points="8,1.4 6.6,0 0,6.5 6.6,13 8,11.6 2.9,6.5 "></polygon></svg></button><button class="textOnlyButton" style="position: absolute; transform: matrix(1, 0, 0, 1, 653, 0);"><span class="buttonLabel">Clear All</span></button></div><div class="ListFooter" style="position: absolute; height: 25px; width: 653px; transform: matrix(1, 0, 0, 1, 0, 225);"><button class="secondaryButton" disabled="disabled" style="position: absolute; transform: matrix(1, 0, 0, 1, 648, 5); opacity: 0.2; cursor: default;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 6" enable-background="new 0 0 8 6" xml:space="preserve" class="buttonIcon"><path d="M8,6H0V0h8V6L8,6z M1,5.4h6.1l-2-2.1L4.7,3.8C4.5,3.9,4.3,4,4,4l0,0C3.8,4,3.6,3.9,3.4,3.8L3,3.4L1,5.4 L1,5.4z M0.6,0.9v4.1l2-2.1L0.6,0.9L0.6,0.9z M5.5,3l2,2.1V1L5.5,3L5.5,3z M1,0.6l2.8,2.8c0,0,0.2,0.1,0.3,0.1l0,0 c0.1,0,0.2,0,0.3-0.1l2.8-2.8H1L1,0.6z"></path></svg><span class="buttonLabel">EMAIL LIST</span></button><button class="secondaryButton" disabled="disabled" style="position: absolute; transform: matrix(1, 0, 0, 1, 653, 5); opacity: 0.2; cursor: default;"><svg style="fill: currentColor;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve" class="buttonIcon"><g><rect x="6.2" y="10.3" width="7.6" height="0.6"></rect><rect x="6.2" y="12.6" width="7.6" height="0.6"></rect><rect x="6.2" y="14.8" width="7.6" height="0.6"></rect><path d="M20,4.4h-4.2V0H4.2v4.4H0v10h4V18h11.8v-3.7H20V4.4z M5,0.8h10v3.5H5V0.8z M15,17.2H5V8.3h10V17.2z"></path></g></svg><span class="buttonLabel">PRINT LIST</span></button></div><div class="ProductInfoBoxScrollPane inertialScroll" style="position: absolute; display: none; overflow-y: hidden; overflow-x: scroll; height: 198px; width: 653px; transform: matrix(1, 0, 0, 1, 0, 25);"><div class="infoBoxes" style="position: absolute;"></div><div class="productInfoBoxScrollPaneEmptyMessage">Currently you have no items added to your list.</div></div></div></div></div><script src="text"></script>   </body></html>

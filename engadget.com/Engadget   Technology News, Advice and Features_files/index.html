@@ -1,0 +1,351 @@
+
+<!-- saved from url=(0060)https://secure-ads.pictela.net/rm/ads/121049/2857/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta charset="UTF-8">  
+    <meta name="p5VersionInfo" content="HTML5 Pictela5 Ver 2.0 Feb 11 20:06">  
+        <script src="TweenMax.min.js"></script>  
+    <script type="text/javascript" src="ADTECH_1_8_3.js"></script>  
+    <script src="jquery.min.js"></script>  
+        <script src="core(1).js"></script>  
+     <style>
+         * {
+           box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           font-family: Helvetica, Arial, sans-serif;
+           margin : 0;
+           padding : 0;
+         }
+         
+         body {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+             opacity: 1;
+             font-family: helvetica, arial,  sans-serif;
+         }
+         #teaser_hotspot {
+             position: absolute;
+             width:246;
+             height: 185;
+             top: 0;
+             left: 0;
+             cursor: pointer;
+             z-index: 99999;
+         }
+         #core {
+             width:300px; /* todo make var */
+             height: 1050px;
+             box-sizing: border-box;
+             border: 1px solid; 
+             border-color: grey;  
+             border-color: #cccccc;
+             position: absolute;
+             right: 0;
+             top:0;
+             background-color: white;
+             background-color: #ffffff;
+         
+             display: none;
+         }
+         
+         .header {
+           font-family: Helvetica, Arial, sans-serif;
+           font-size: 1em;
+           font-size: /*var=Header_size*/;
+           color: #808080;
+           margin: 0;
+           display: block;
+           font-weight: normal;
+           height: 22px;
+           overflow: hidden;
+         }
+         .app_div, .app_iframe {
+             width: 280px;   /* todo make var */
+             position: absolute;
+             border: none;
+             height: 203px;    /* todo make var */
+             z-index: 1000;
+             background-color: transparent;
+         }
+         .app_div {
+             right: 9px;  /* todo make var */
+         }
+         .app_iframe {
+             right: 0;
+             top: 0;
+         }
+         .app_iframe.withTitle, #app1.withTitle, #app2.withTitle, #app3.withTitle {
+             position: absolute;
+             top: 22px;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             margin: 0;
+         }
+         #app1_div {
+             //right: 0px;  /* todo make var */
+             //width: 300px;   /* todo make var */
+             top:75px;   /* todo make var */
+             height: 460px;    /* todo make var */
+         }
+         #app2_div {
+             top:567px;    /* todo make var */
+         }
+         #app3_div {
+             top:801px;  /* todo make var */
+         }
+         #app1 {
+             width: 280px;   /* todo make var */
+             height: 460px;     /* todo make var */
+         }
+         .logo {
+             position: absolute;
+             background: no-repeat left top;
+         }
+         .abs {
+             position: absolute;
+         }
+         
+         .footer {
+             position: absolute;
+             font-family: arial, helvetica, sans-serif;
+             font-size: 12px;
+             color: #808080;
+         }
+         .footer a {
+            color: #003366;
+            color: /*var=Text_clickthrough_color*/;
+            
+         }
+         .appDivider {
+             position: absolute;
+             width: 280px;   /* todo make var */
+             height: 1px;
+             background-color: #cccccc;
+             background-color: #cccccc;
+             
+             left:9px;
+         }
+         #appDivider1_2 {
+             top:551px;
+         }
+         #appDivider2_3 {
+             top:785px;
+         }
+         .expandframe{
+             position:absolute;
+             background-color:#ffffff;
+             border:1px solid #cccccc;
+             border-right:1px solid #ffffff;
+             display:none;
+         }
+         a.ptlaCTA {
+           margin-right: 15px;
+           border-radius: 2px;
+           color: #ffffff;
+           color: /*var=Button_text_color*/;
+           float: right;
+           position: relative;
+           padding: 10px 10px 10px 10px;
+           font-size: 12px;
+           line-height: 10px;
+           background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+           background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+           text-decoration: none;
+           background-color: #003366;
+           -webkit-touch-callout: none;
+             -webkit-user-select: none;
+             -khtml-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+             user-select: none;
+             cursor: pointer;
+         }
+         a.ptlaCTA:hover {
+           background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+           background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+         }
+         #appSwitchArea {
+             right:100px;
+             top:9px;
+             display: none;
+             position: absolute;
+         }
+         
+         
+         #core {
+             height: 315px;
+             width: 728px;
+             overflow: visible;
+         }
+         
+         .app_div, .app_iframe {
+             width: 653px;   /* todo make var */
+             height: 250px;    /* todo make var */
+         }
+         
+         
+         #app1 {
+             height: 313px;     /* todo make var */
+             width: 726px;
+         }
+         #app1_div {
+             
+             top:54px;   /* todo make var */
+             top:0;
+             width: 726px;
+             height: 250px;
+             right: 0px;
+         }
+         
+         
+         #closeBtn, #openBtn {
+             width: 63px;
+             height: 19px;
+             background-repeat: no-repeat;
+              display: none;
+             top: 10px;
+             right: 10px;
+             position: absolute;
+             cursor: pointer;
+             z-index: 2000;
+         }
+         #closeBtn{
+             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAATCAMAAAAQ7yWgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5QTFRF9fX1nZ2d6urqz8/Pw8PDvb298PDwsbGx7+/v1dXV4ODg6+vrqqqqpKSkqKio2trara2trKysp6enqamp9PT0tra2t7e3ycnJ5eXltbW1Ke1OWwAAAKxJREFUeNrskskOwjAMRL0lJqVlX///R4mdtIBaEEgcOHQOlez2zdhWAWb9hxpFDEDoBXeIknut9QBNafjySBM4IUNULvy6S0AqoN4DHIDDImu3Wo55zjlwiYUP7I7xFKKVd37jo+B+bCBcx7Bn2xQsimK2cMY9sGo7nU/8nO/G4SH/NW/755X7/Rsroh3tLB/NX29N9loglfun3FMqqfz+fl/oSvPf/ivdBBgAQ4EEA9sycl8AAAAASUVORK5CYII=);
+         }
+         
+         
+         
+         #openBtn {
+             z-index: 2001;
+             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAATCAMAAAD/LU6eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxMjJFOTJCRjE2MjA2ODExOEE2RDkwMTBFMUNGMDlCRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2RkM0QkZGNDQ4OEExMUUzQjBBQkNGMzA2NDQ5Nzk4RSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2RkM0QkZGMzQ4OEExMUUzQjBBQkNGMzA2NDQ5Nzk4RSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qjc2MUE4Rjg3QjIwNjgxMThBNkRCOERDMjI4Q0UxQzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTIyRTkyQkYxNjIwNjgxMThBNkQ5MDEwRTFDRjA5QkYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6F7V2iAAAAYFBMVEWWlpbh4eGamprJycnu7u6qqqrS0tLFxcXk5OTa2tqhoaHw8PCdnZ22trb29vbBwcGmpqaxsbG9vb3Ozs65ubmurq7q6urr6+vp6eno6Ojs7Ozn5+fm5ubt7e3z8/OSkpLTQGIEAAABWklEQVR42pxU2W7EIAyEYBIHcnfXB0f2//+ytC9Vq+4L84BAYjyDPcLcdwXqxL2ZyiX30hlMW5P2gowKcS80GxHJ0gnOhjlJr3pt6kQirYJWGI/FnJbPxZhhj94Y87rcMLPuEzK1S2J9ibmkn+Z90ylTIpiPCcsziLswjsGeI9W7uHAQry4lRo02BLGllfpNF26jz+6Zy5aPcZ2EXJDVWUSc/XrBwzELgQ3NkAmv4y8dKiY7TbXg5sd1GIbF8dOEMHy4J/rx2jNkKH5or/qq8IfOKgg0nRjRho99gtx2TRLt5h559A8HgKkc7+gItcTZO6CH52svCFhXp6LFnUrr4Kpmvt+alxgxwehN8HNcJ9CEtXV+Wbw7Y5HFFY0Z4F3rKjLkFPlLNSlr1NqizKQcWzS5zUXA8n+Do3bqjU1Sk7Ryb2hJTG1ee+lZDKiUXvM5mS1C7f0u4vYpwACMOFxzlLgemQAAAABJRU5ErkJggg==);
+         }
+         .size728 #closeBtn{
+             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAATCAMAAAAQ7yWgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxQTFRF6urqz8/PsbGxvb29w8PD8PDw8/Pz1dXV4ODgqqqqtra2vr6+pKSk2traycnJsrKyt7e35eXlnZ2d9fX1yafThQAAALJJREFUeNrsk90OwyAIhQG12tr9wfu/6wTt5tIu67JdlotG0O8cICnIbwEH/2UMOQ9bfCJmJ8CW4MzsS23UmrBGbPjEPA1rHhglEFb+NEcB8kJWE366KN4LPG6w+MgtVN6hKYarC5p2fLZeOK94j60N/Y6pYsETFwlDlpd63pjf/AFf/U3Y9f5veZ2/jLzMnzQJurSz38W3XYNee4l1/7HUCGr/+IHfG5ciefw//+LvAgwA+6dSPRC0Q7IAAAAASUVORK5CYII=);
+         }
+         
+         .size728 #openBtn {
+             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAATCAMAAAAd8VXnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJQTFRFkJCQtLS0vLy8o6Oj7OzscXFx5ubm29vbjIyMmpqahoaG+fn5fHx8l5eXxMTE1NTUzMzM4+PjhYWFq6urZmZm6urqLb4jkwAAAKlJREFUeNrUlNsOgyAMhksRFBRR177/q44C24wzMXK1/RcQSj/acoKx4xZ1I7SBCQVu1a+TG9F2Ri6eCHrWlIQM0mmkyKxV9RDTCdmbRxpN2W8hBhQjGn9NKiftNIvfbF4kOHVJlnnAfbaIsJp4J2ZeosTk2VdLoKxwUqd617kn2VGx2EHAwX7vbax7W0lxAyFXU7MV9APeOk8bgv2f23cg299n85/wFGAAqV9Q+s65bkcAAAAASUVORK5CYII=);
+         }
+         
+         
+         
+                  .size300 .teaser {
+                    position: absolute;
+                    right: 44px;
+                    top: 54px;
+                    width:246px;
+                    height:185px;
+                    overflow: hidden;
+                  }
+                  
+                  .size300 .teaser div { 
+                    width: 246px;
+                    height: 185px;
+                    position:absolute;
+                  }
+                  
+                  .size300 .teaser div img.teaserImg {
+                    width: 246px;
+                    height: 185px;
+                  }
+         
+         
+         
+         
+         
+         
+         
+         
+         .size728 .teaser {
+           position: absolute;
+           right: 35px;
+           top: 0;
+           width:246px;
+           height:185px;
+           overflow: hidden;
+         }
+         
+         .size728 .teaser div { 
+         	width: 728px;
+         	height: 90px;
+         	position:absolute;
+         }
+         
+         .size728 .teaser div img.teaserImg {
+         	width: 728px;
+         	height:90px;
+         }
+         
+         .teaser figcaption {
+           width: 100%
+         }
+         .teaser figcaption .title, .teaser figcaption .descriptor {
+           font-size: .8em;
+           line-height: 1.2em;
+         }
+         .teaser a {
+           position: absolute !important;
+           right: 10px !important;
+           top: 10px !important;
+           font-size: 10px!important;
+           line-height: 1em !important;
+         
+         }
+         
+         .size728 .teaser {
+           position: absolute;
+           left: 0;
+           right: 0;
+           top: 0;
+           height:90px;
+           width:auto;
+           overflow: hidden;
+           z-index:1000;
+         }
+         
+         #teaserHtml {
+         	width:100%;
+         	height: 100%;
+         	position: absolute;
+         	top: 0;
+         	left: 0;
+         	background-color: #ccc;
+         }
+         
+         .teaser figcaption, .teaser .capTable {
+           background-color:  rgba(/*var=Teaser_Background_colorRGBA*/);
+           border-top-style: /*var=Teaser_Background_top_style*/;
+         }
+         
+         
+         .teaser figcaption .title, .teaser .capTable .title {
+             font-size: /*var=Teaser_Title_size*/;
+             line-height: /*var=Teaser_Title_line_height*/;
+             color: /*var=Teaser_Title_text_color*/;
+         }
+         
+         .teaser figcaption .descriptor, .teaser .capTable .descriptor {
+             font-size: /*var=Teaser_Description_size*/;
+             line-height: /*var=Teaser_Description_line_height*/;
+             color: /*var=Teaser_Description_text_color*/;
+           }
+         .teaser figcaption a.ptlaCTA, .teaser .capTable a.ptlaCTA{
+           color: /*var=Teaser_Button_text_color*/;
+           background-color: /*var=Teaser_Button_color*/;
+         }
+         #teaser_hotspot {
+           background-color: #ffffff;
+           opacity: 0;
+         }
+    </style>  
+    <meta name="ad.size" content="width=728,height=315"> 
+  </head>
+  <body class="size300"> 
+    <div id="spacer"></div>  
+    <div id="core" class="size300" style="width: 300px; height: 250px; display: block; opacity: 1; border-width: 1px;"><div class="app_div" id="app1_div"><iframe id="app1" data-loc="1" scrolling="no" src="gallery.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" class="app_iframe"></iframe></div><div id="openBtn" style="display: block;"></div><div id="closeBtn"></div><style>#logo_0{left:9px; top:9px; height:35px; width:205px; z-index:1000; cursor:pointer; background-image:url(https://secure-ads.pictela.net/rm/ads/121049/2857/logo_205x45.gif); }</style><div id="logo_0" data-index="0" class="logo"></div><div class="teaser" id="teaser"><div id="teaserContents"><img class="teaserImg" src="teaser5_300x250.jpg" onload="teaserReady();"><div id="teaser_hotspot"></div></div></div><style></style><iframe id="intro" src="NCK_BB_introAnimation5_300x250.html" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="left: 0px; top: 0px; height: 100%; width: 100%; position: absolute; z-index: 99999999; border: none; display: none; background: rgb(255, 255, 255);"></iframe></div> 
+  
+
+</body></html>

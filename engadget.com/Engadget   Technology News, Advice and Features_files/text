@@ -1,0 +1,280 @@
+AOLCT.CustomProductFeedAPI.onAllDataLoaded0({
+    "productsByCategory": [
+        {
+            "category": "Best Deals of the Week",
+            "products": [
+                {
+                    "title": "Samsung - Galaxy Tab Pro 10.1 - 16GB - Black",
+                    "price": "$299.99",
+                    "priceQualifier": "(SAVE $100)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x353.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3716\/3716028_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "HP - ENVY TouchSmart 15.6\" Touch-Screen Laptop - AMD FX-Series - 6GB Memory - 750GB Hard Drive - Natural Silver",
+                    "price": "$649.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x383.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/8825\/8825037_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Insignia&#8482; - 39\" Class (38-1\/2\" Diag.) - LED - 720p - HDTV - Black",
+                    "price": "$249.99",
+                    "priceQualifier": "(SAVE $50)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x333.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/2125\/2125035_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 55\" Class (54-5\/8\" Diag.) - LED - 1080p - Smart - 3D - HDTV - Silver",
+                    "price": "$1199.99",
+                    "priceQualifier": "(SAVE $500)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x309.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/4323\/4323036_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Google - Nexus Player - Black",
+                    "price": "$90.99",
+                    "priceQualifier": "(SAVE $9)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x428.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/2445\/2445015_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - BD-J5100\/ZA - Streaming Blu-ray Player - Black",
+                    "price": "$79.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x127.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3147\/3147057_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 60\" Class (60\" Diag.) - LED - 1080p - Smart - 3D - HDTV - Silver",
+                    "price": "$1299.99",
+                    "priceQualifier": "(SAVE $700)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x309.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/4324\/4324008_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 65\" Class (64-1\/2\" Diag.) - LED - 1080p - Smart - 3D - HDTV - Silver",
+                    "price": "$1499.99",
+                    "priceQualifier": "(SAVE $800)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x309.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/4376\/4376023_sa.jpg",
+                    "clickUrl": ""
+                }
+            ]
+        },
+        {
+            "category": "Home Theater",
+            "products": [
+                {
+                    "title": "Insignia&#8482; - 32\" Class (31-1\/2\" Diag.) - LED - 1080p - HDTV - Black",
+                    "price": "$199.99",
+                    "priceQualifier": "(SAVE $30)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x340.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6230\/6230244_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 40\" Class (40\" Diag.) - LED - 1080p - Smart - HDTV - Black",
+                    "price": "$579.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x329.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6084\/6084131_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 50\" Class (49-1\/2\" Diag.) - LED - 1080p - Smart - HDTV - Black",
+                    "price": "$799.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x329.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6174\/6174103_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Sony - 55\" Class (54.6\" Diag.) - LED - 2160p - Smart - 4K Ultra HD TV - Silver",
+                    "price": "$1499.99",
+                    "priceQualifier": "(SAVE $100)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x305.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/2003\/2003054_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Sling Media - Slingbox 350 - Black",
+                    "price": "$84.99",
+                    "priceQualifier": "(SAVE $95)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x150.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6578\/6578328_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Onkyo - 575W 5.2-Ch. Network-Ready 4K Ultra HD and 3D Pass-Through A\/V Home Theater Receiver",
+                    "price": "$399.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x176.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/4828\/4828027_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Rocketfish&#8482; - Indoor\/Outdoor Bluetooth Speaker - Black",
+                    "price": "$99.99",
+                    "priceQualifier": "(SAVE $50)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-282x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/1610\/1610736_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Rocketfish&#8482; - Universal Wireless Rear Speaker Kit - Black",
+                    "price": "$79.99",
+                    "priceQualifier": "(SAVE $20)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x316.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/8275\/8275528_sa.jpg",
+                    "clickUrl": ""
+                }
+            ]
+        },
+        {
+            "category": "Computing",
+            "products": [
+                {
+                    "title": "Lenovo - Yoga 2 2-in-1 11.6\" Touch-Screen Laptop - Intel Pentium - 4GB Memory - 500GB Hard Drive - Silver",
+                    "price": "$449.99",
+                    "priceQualifier": "(SAVE $30)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x360.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3297\/3297045_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Lenovo - Yoga 2 2-in-1 11.6\" Touch-Screen Laptop - Intel Core i3 - 4GB Memory - 500GB Hard Drive - Silver\/Black",
+                    "price": "$579.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x358.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/8618\/8618406_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Toshiba - Radius 2-in-1 15.6\" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 750GB Hard Drive - Satin Gold",
+                    "price": "$699.99",
+                    "priceQualifier": "(SAVE $100)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x381.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6128\/6128119_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Toshiba - Satellite Radius 15.6\" Touch-Screen Laptop - Intel Core i7 - 8GB Memory - 1TB Hard Drive - Satin Gold",
+                    "price": "$799.99",
+                    "priceQualifier": "(SAVE $100)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x381.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3477\/3477007_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "HP - Pavilion 23\" Touch-Screen All-In-One - AMD A8-Series - 8GB Memory - 1TB Hard Drive",
+                    "price": "$679.99",
+                    "priceQualifier": "(SAVE $100)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x392.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/8585\/8585162_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Tax Software Deluxe: Homeowners\/Investors Federal and State - Windows|Mac",
+                    "price": "$29.99",
+                    "priceQualifier": "(SAVE $15)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-355x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/9724\/9724153_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Studio C - Tutti Laptop Sleeve - Navy\/Yellow\/Orange\/Pink\/Green",
+                    "price": "$29.99",
+                    "priceQualifier": "(SAVE $1.5)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x350.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6913\/6913582_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Studio C - Mint to Be Ladies' Laptop Tote - Black\/Mint",
+                    "price": "$51.49",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-399x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/1775\/1775138_sa.jpg",
+                    "clickUrl": ""
+                }
+            ]
+        },
+        {
+            "category": "Appliances",
+            "products": [
+                {
+                    "title": "Samsung - 4.2 Cu. Ft. 11-Cycle High-Efficiency Steam Front-Loading Washer - Merlot",
+                    "price": "$989.99",
+                    "priceQualifier": "(SAVE $110)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-362x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3462\/3462002_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 7.5 Cu. Ft. 13-Cycle Steam Electric Dryer - Merlot",
+                    "price": "$989.99",
+                    "priceQualifier": "(SAVE $110)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-354x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3462\/3462011_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 5.9 Cu. Ft. Self-Cleaning Freestanding Electric Range - Stainless-Steel",
+                    "price": "$549.99",
+                    "priceQualifier": "(SAVE $250)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-351x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/9772\/9772094_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Samsung - 28.1 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water - Stainless-Steel",
+                    "price": "$2399.99",
+                    "priceQualifier": "(SAVE $500)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-256x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/2960\/2960173_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Keurig - 2.0 K550 4-Cup Coffeemaker - Black\/Dark Gray",
+                    "price": "$199.99",
+                    "priceQualifier": "",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-500x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6628\/6628105_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Ninja - Nutri Ninja Pro 24-Oz. Blender - Black\/Silver",
+                    "price": "$92.99",
+                    "priceQualifier": "(SAVE $7)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-397x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/3882\/3882017_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Hoover - WindTunnel 3 Pro Pet HEPA Bagless Upright Vacuum - Cobalt Blue",
+                    "price": "$139.99",
+                    "priceQualifier": "(SAVE $30)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-173x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/7555\/7555078_sa.jpg",
+                    "clickUrl": ""
+                },
+                {
+                    "title": "Panasonic - Arc4 Wet\/Dry Men's Shaver - Blue",
+                    "price": "$133.99",
+                    "priceQualifier": "(SAVE $16)",
+                    "description": "",
+                    "imageUrl": "https:\/\/secure-ads.pictela.net\/a\/proxy\/image-211x500.jpg?&url=http:\/\/img.bbystatic.com\/BestBuy_US\/images\/products\/6459\/6459418_sa.jpg",
+                    "clickUrl": ""
+                }
+            ]
+        }
+    ]
+});

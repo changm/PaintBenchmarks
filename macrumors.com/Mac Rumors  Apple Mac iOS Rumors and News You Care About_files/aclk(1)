@@ -1,0 +1,243 @@
+
+(function() {
+  var DEBUG = ''.toLowerCase() == 'true';
+  var csiStart = (+new Date);
+  var studioObjects = window['studioV2'] = window['studioV2'] || {};
+  var eventTags = {"img_event_tag":[],"js_event_tag":[]};
+  var publisherSideFilePath = unescape('');
+  if(publisherSideFilePath == '') {
+    publisherSideFilePath = '/doubleclick/DARTIframe.html';
+  } else if (publisherSideFilePath.charAt(publisherSideFilePath.length - 1) == '/') {
+    publisherSideFilePath += 'DARTIframe.html';
+  }
+  var bookingTimeMetaData = {
+  };
+
+  var runtimeMetaData = {
+  };
+
+  var exitUrlPatternMacroValues = {
+  };
+  var macroParser = function (macroName, value) {
+    return (value.indexOf(macroName) < 0) ? value : '';
+  };
+  var adServerData = {
+    eventReportingUrl: 'https://ad.doubleclick.net/activity;src=3756078;met=1;v=1;pid=116818760;aid=289746321;ko=0;cid=59826436;rid=59715123;rv=8;',
+    clickUrl: 'https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvOFf_4yc8bsE6MD8ayvob8qcM8x4C9ImNDNSN4mvjOZy_U9OjkSZ5FI4nEtn7yVTxjdMqkEcZEoEsQ5VOmw6O7BW-d_nJ8N9OGoV7QZFSQnNEaA6rmWrZV02Za8zqIS6RaoIwAwldN9A&sig=Cg0ArKJSzDELoiq4us3wEAE&adurl=http://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DB2iESD7kiVbnrLdPd-QPkv4HwBISSzdwHAAAAEAEgADgAWIT82LixAWDJhvuGyKOQGYIBF2NhLXB1Yi01NTA1OTA1NTc5NTk5OTA1sgERd3d3Lm1hY3J1bW9ycy5jb226AQlnZnBfaW1hZ2XIAQnaARlodHRwOi8vd3d3Lm1hY3J1bW9ycy5jb20vmALYNsACAuACAOoCGjQ1ODUvbnMubWFjcnVtb3JzL2hvbWVwYWdl-AKD0h6QA6wCmAPgA6gDAeAEAaAGFtgHAA%26num%3D0%26sig%3DAOD64_36xM0yZx75aNKB3_T_wjG7eJRqGg%26client%3Dca-pub-5505905579599905%26adurl%3D',
+    clickUrlTimesToEscape: '',
+    clickEventTagUrl: eventTags['click_event_tag'],
+    impressionUrl: 'https://googleads4.g.doubleclick.net/pcs/view?xai=AKAOjsvOFf_4yc8bsE6MD8ayvob8qcM8x4C9ImNDNSN4mvjOZy_U9OjkSZ5FI4nEtn7yVTxjdMqkEcZEoEsQ5VOmw6O7BW-d_nJ8N9OGoV7QZFSQnNEaA6rmWrZV02Za8zqIS6RaoIwAwldN9A&sig=Cg0ArKJSzB6dbX2nm8-pEAE&adurl=',
+    geoData: 'ct=US&st=CA&city=13461&dma=195&zp=90404&bw=4',
+    siteName: 'N7443.8256.ZIFFDAVISMEDIANETWORK',
+    siteId: '1471435',
+    adId: '289746321',
+    exitSuffix: macroParser('exit_suffix', ''), // XFA GA Beacon.
+    buyId: '8642565',
+    creativeId: '59826436',
+    placementId: '116818760',
+    advertiserId: '3756078',
+    keyValueOrdinal: '0',
+    renderingVersion: '8',
+    renderingId: '59715123',
+    randomNumber: '2596292223',
+    dynamicData: '{\"DDR_2014_Dynamic_Feed_feed\":[{\"Background_Color\":\"ffde05 \",\"CTA_Rollover_Text_Color\":\"0\",\"CTA_Rollover_button_Color\":\"ffffff \",\"CTA_button_color\":0,\"CTA_copy\":\"Pre-order now\",\"CTA_copy_color\":\"ffffff \",\"Default\":false,\"End_Date\":{\"RawValue\":\"4/9/2015 23:59:59 (-04:00)\",\"UtcValue\":1428638399000},\"Exit_URL\":{\"Url\":\"https://d.agkn.com/pixel/2632/?che=2596292223&col=8642565,1471435,116818760,289746321,59826436&l1=http%3A%2F%2Fwww%2Esprint%2Ecom%2Flandings%2Funlimited%2Dplus%2Dsamsung%2Dgalaxy%2Findex%2Ehtml%3FECID%3DMA%3AAB%3A20150401%3A2015%5FQ2%5FSprint%5FZMOT%5FDisplay%3ASprintC%5FZ%5FZiffDavis%5FDSK%5FBAN%5FCPM%5F300x600%5FCT%7CMobileConsumers%5FDYO%3ASprint%5FZMOT%5FDynamic%5FUnit\"},\"Happy_Connecting\":true,\"Happy_Connecting_Text\":\"\",\"Icon_swf_160x600\":{\"Url\":\"\"},\"Icon_swf_300x250\":{\"Url\":\"\"},\"Icon_swf_300x600\":{\"Url\":\"\"},\"Icon_swf_728x90\":{\"Url\":\"\"},\"Image1\":{\"Url\":\"https://s0.2mdn.net/dynamic/2/1250384/googledrive.com/host/0B2dFi_G1ilL9Tm14Qk9nVmlOUms/Galaxy_S6_Standard_Template.png_1427405698904_Galaxy_S6_Standard_Template.png\"},\"Image1_180x150\":{\"Url\":\"https://s0.2mdn.net/dynamic/2/1250384/googledrive.com/host/0B2dFi_G1ilL9Tm14Qk9nVmlOUms/Galaxy_S6_180x150_Template.png_1427405698904_Galaxy_S6_180x150_Template.png\"},\"Image2_180x150\":{\"Url\":\"https://s0.2mdn.net/dynamic/2/1250384/googledrive.com/host/0B2dFi_G1ilL9Tm14Qk9nVmlOUms/Galaxy_S6_180x150_Template.png_1427405698904_Galaxy_S6_180x150_Template.png\"},\"Is_Active\":true,\"Legal_Copy\":\"Reqs new line of service or eligible upgrade. Free after $20/mo.\\ncredit. Additional restrictions apply.\",\"Legal_Rollover\":\"<u>Restrictions apply</u>\",\"Offer_Details\":\"GS6PreOrder\",\"Offer_PriceValue\":\"$80/mo.\",\"Offer_Type\":\"National\",\"Reporting_Label\":\"Samsung_GS6_Preorder\",\"Start_Date\":{\"RawValue\":\"3/30/2015 00:00:01 (-04:00)\",\"UtcValue\":1427688001000},\"Template\":\"Plans_Services_OLA\",\"Text_Color\":0,\"Unique_ID\":\"Q102\",\"_index\":0,\"closing_headline_160x600\":\"The new Unlimited Plus Plan\",\"closing_headline_180x150\":\"The new Unlimited Plus Plan\",\"closing_headline_300x250\":\"<font size=\\\"20\\\">The new Unlimited Plus Plan\",\"closing_headline_300x600\":\"<font size=\\\"28\\\">The new Unlimited Plus Plan\",\"closing_headline_728x90\":\"The new Unlimited Plus Plan\",\"image2\":{\"Url\":\"https://s0.2mdn.net/dynamic/2/1250384/googledrive.com/host/0B2dFi_G1ilL9Tm14Qk9nVmlOUms/Galaxy_S6_Standard_Template.png_1427405698904_Galaxy_S6_Standard_Template.png\"},\"offer_eyebrow_copy_160x600\":\"\",\"offer_eyebrow_copy_180x150\":\"\",\"offer_eyebrow_copy_300x250\":\"\",\"offer_eyebrow_copy_300x600\":\"\",\"offer_eyebrow_copy_728x90\":\"\",\"primary_copy_160x600\":\"<font size=\\\"22\\\">Get a free Samsung Galaxy S&#174; 6\",\"primary_copy_180x150\":\"Get a free Samsung Galaxy S&#174; 6\",\"primary_copy_300x250\":\"<font size=\\\"22\\\">Get a free Samsung Galaxy S&#174; 6\",\"primary_copy_300x600\":\"<font size=\\\"22\\\">Get a free Samsung Galaxy S&#174; 6\",\"primary_copy_728x90\":\"Get a free Samsung Galaxy S&#174; 6\",\"summary_copy_160x600\":\"<font size=\\\"11\\\">Get a free Samsung Galaxy S&#174; 6 with the first free lease in the wireless industry\",\"summary_copy_180x150\":\"<font size=\\\"10\\\">Get a free Samsung Galaxy S&#174; 6 with the first free lease in the wireless industry\",\"summary_copy_300x250\":\"<font size=\\\"12\\\">Get a free Samsung Galaxy S&#174; 6 with the first free lease in the wireless industry\",\"summary_copy_300x600\":\"<font size=\\\"11.5\\\">Get a free Samsung Galaxy S&#174; 6 with the first free lease in the wireless industry\",\"summary_copy_728x90\":\"<font size=\\\"10.5\\\">Get a free Samsung Galaxy S&#174; 6 with the first free lease in the wireless industry\",\"supporting1_copy_160x600\":\"with unlimited high-speed data, talk and text for $80/mo.\",\"supporting1_copy_180x150\":\"with unlimited high-speed data, talk and text for $80/mo.\",\"supporting1_copy_300x250\":\"with unlimited high-speed data, talk and text for $80/mo.\",\"supporting1_copy_300x600\":\"with unlimited high-speed data, talk and text for $80/mo.\",\"supporting1_copy_728x90\":\"with unlimited high-speed data, talk and text for $80/mo.\",\"supporting2_copy_160x600\":\"\",\"supporting2_copy_180x150\":\"\",\"supporting2_copy_300x250\":\"\",\"supporting2_copy_300x600\":\"\",\"supporting2_copy_728x90\":\"\",\"urgency_box_color\":\"\\nffde05\",\"urgency_message_160x600\":\"\",\"urgency_message_180x150\":\"\",\"urgency_message_300x250\":\"\",\"urgency_message_300x600\":\"\",\"urgency_message_728x90\":\"\",\"urgency_message_color\":\"\"}],\"_profileid\":1033576}',
+    stringReportingUrl: 'https://ad.doubleclick.net/activity;src=3756078;stragg=1;v=1;pid=116818760;aid=289746321;ko=0;cid=59826436;rid=59715123;rv=8;rn=2596292223;',
+    urlToGetKeywordsFor: '%LivePreviewSiteUrl',
+    bookingTimeMetaData: bookingTimeMetaData,
+    generatedAdSlot: false,
+    exitUrlPatternMacroValues: exitUrlPatternMacroValues,
+    activeViewClkStr: macroParser('eav', 'BYUYFELkiVea3CuSSlAK84oHIAQAAAAAQATgByAEJ4AQCoAY_'),
+    renderingEnvironment: ('' == '1' ||
+        window['mraid']) ? 'IN_APP' : 'BROWSER',
+    placementDimensions: {
+      'w': '300',
+      'h': '600'
+    },
+    tag: {
+      adContainerElementId: macroParser('ad_container_id', ''),
+      hideObjects: '',
+      top: '',
+      left: '',
+      zIndex: '',
+      duration: '',
+      wmode: '',
+      preferHtml5Artwork: '' == 'true',
+      adSenseKeywords: '',
+      adSenseLatitude: '',
+      adSenseLongitude: '',
+      publisherSideFilePath: publisherSideFilePath,
+      runtimeMetaData: runtimeMetaData,
+      lidarEnabled: false,
+      expansionMode: '',
+      renderFloatInplace: ''.toLowerCase() == 'true',
+      tryToWriteHtmlInline: ''.toLowerCase() == 'true'
+    }
+  };
+
+    var scheme = location.protocol;
+  var staticResourceMediaServer = scheme == 'https:' ?
+       'https://s0.2mdn.net' :
+       'http://s0.2mdn.net';
+
+  var creativeMediaServer = scheme == 'https:' ?
+       'https://s0.2mdn.net' :
+       'http://s0.2mdn.net';
+
+  var backupImageUrl = '/ads/richmedia/studio/pv2/34202037/20150330122051075/Sprint_DA4DD06_ZMOT_300x600_endframe.jpg';
+  if (!/^https?:/.test(backupImageUrl)) {
+    backupImageUrl = creativeMediaServer + backupImageUrl;
+  }
+  var backupImage = {
+    exitUrl: 'https://ad.doubleclick.net/activity;src=3756078;met=1;v=1;pid=116818760;aid=289746321;ko=0;cid=59826436;rid=59715123;rv=8;cs=m;eid1=2027780;ecn1=1;etm1=0;_dc_redir=url?https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvOFf_4yc8bsE6MD8ayvob8qcM8x4C9ImNDNSN4mvjOZy_U9OjkSZ5FI4nEtn7yVTxjdMqkEcZEoEsQ5VOmw6O7BW-d_nJ8N9OGoV7QZFSQnNEaA6rmWrZV02Za8zqIS6RaoIwAwldN9A&sig=Cg0ArKJSzDELoiq4us3wEAE&adurl=http://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DB2iESD7kiVbnrLdPd-QPkv4HwBISSzdwHAAAAEAEgADgAWIT82LixAWDJhvuGyKOQGYIBF2NhLXB1Yi01NTA1OTA1NTc5NTk5OTA1sgERd3d3Lm1hY3J1bW9ycy5jb226AQlnZnBfaW1hZ2XIAQnaARlodHRwOi8vd3d3Lm1hY3J1bW9ycy5jb20vmALYNsACAuACAOoCGjQ1ODUvbnMubWFjcnVtb3JzL2hvbWVwYWdl-AKD0h6QA6wCmAPgA6gDAeAEAaAGFtgHAA%26num%3D0%26sig%3DAOD64_36xM0yZx75aNKB3_T_wjG7eJRqGg%26client%3Dca-pub-5505905579599905%26adurl%3Dhttps://halfprice.sprint.com/',
+    target: '_blank',
+    imageUrl: backupImageUrl,
+    width: '300',
+    height: '600',
+    backupDisplayActivityUrl: [
+      adServerData.eventReportingUrl,
+      '&timestamp=', (+new Date), ';',
+      'eid1=9;ecn1=1;etm1=0;'].join(''),
+    thirdPartyBackupImpressionUrl: ''
+  };
+
+  var versionPrefix = DEBUG ? 'db_' : '';
+  var templateVersion = '200_74';
+  var renderingScriptPath = '/879366';
+  var rendererDisplayType = '';
+  rendererDisplayType += 'flash_';
+  var rendererFormat = 'inpage';
+  var rendererName = rendererDisplayType + rendererFormat;
+  var renderingLibrary = renderingScriptPath + '/' + rendererName + '_rendering_lib_' +
+      versionPrefix + templateVersion + '.js';
+  // Adserver has a logic to detect media files and prepend host name.
+  if (!/^https?:/.test(renderingLibrary)) {
+    renderingLibrary = staticResourceMediaServer + renderingLibrary;
+  }
+
+  var adCreativeDefinitions = {};
+    adCreativeDefinitions['286195336'] = '/ads/richmedia/studio/creative/34202037/36187171_a82f64cdb26b53614f51acd5e61b5c2c_286195336_creative_override.js';
+    adCreativeDefinitions['287265252'] = '/ads/richmedia/studio/creative/34202037/36187171_311fd706b1f5c8ce1a1bc61d6f24140f_287265252_creative_override.js';
+    adCreativeDefinitions['289071536'] = '/ads/richmedia/studio/creative/34202037/36187171_1e917227d6648963f77c3fd576fbb4d0_289071536_creative_override.js';
+    adCreativeDefinitions['289746321'] = '/ads/richmedia/studio/creative/34202037/36187171_bbeb4b4ecff11237e60db6d2592f2b68_289746321_creative_override.js';
+
+  var creativeId = '59826436';
+  var adId = adCreativeDefinitions[adServerData.adId] ? adServerData.adId : 0;
+  // The unique creative is identified by combination of creative id and ad id.
+  // When the same creative(same creative id and same ad id) is served on the page more
+  // than once then they will share the creative definition yet there will be
+  // multiple instances of 'adResponses'.s
+  var creativeKey = [creativeId, adId].join('_');
+  var creativeDef = adCreativeDefinitions[adServerData.adId] ?
+      adCreativeDefinitions[adServerData.adId] :
+      '/ads/richmedia/studio/creative/34202037/36187171_8265b6b6aeb2b2261be7523a90d129bc_creative_def.js';
+  if(!/^https?:/.test(creativeDef) && creativeDef.substring(0, 2) != '//') {
+    creativeDef = creativeMediaServer + creativeDef;
+  }
+  studioObjects['creativeCount'] = studioObjects['creativeCount'] || 0;
+  var creativeDto = {
+    id: creativeId,
+    uniqueId: creativeId + '_' + studioObjects['creativeCount']++,
+    templateVersion: templateVersion,
+    adServerData: adServerData,
+    isPreviewEnvironment: '%PreviewMode' == 'true',
+    hasFlashAsset: true,
+    hasHtmlAsset: false,
+    requiresCss3Animations: false,
+    flashVersion: '9',
+    httpsMediaServer: 'https://s0.2mdn.net',
+    httpMediaServer: 'http://s0.2mdn.net',
+    renderingScriptPath: renderingScriptPath,
+    renderingLibrary: renderingLibrary,
+    rendererName: rendererName,
+    creativeDefinitionUrl: creativeDef,
+    creativeKey: creativeKey,
+    thirdPartyImpressionUrls: eventTags['img_event_tag'],
+    thirdPartyArtworkImpressionUrl: '',
+    breakoutToTop: false,
+    dimensions: {
+      width: '300px',
+      height: '600px'
+    },
+    backupImage: backupImage,
+    csiStart: csiStart,
+    csiAdRespTime: csiStart - (parseFloat('') || 0),
+    csiEvents: {},
+    hasModernizrFeatureChecks: false,
+    html5FeatureChecks: [
+    ],
+    hasSwiffyHtmlAsset: false
+  };
+
+  var inGdnIframe = window['IN_ADSENSE_IFRAME'] || false;
+  var inYahooSecureIframe = window.Y && Y.SandBox && Y.SandBox.vendor;
+  var inWinLiveIframe = false;
+  try {
+    inWinLiveIframe = !!window.$WLXRmAd;
+  } catch(e) {}
+  var inSafeFrame = window.$sf && window.$sf.ext;
+  var isMsnAjaxIframe = (typeof(inDapMgrIf) != 'undefined' && inDapMgrIf);
+  var breakoutIframe = ''.toLowerCase();
+  var shouldBreakout = (((false ||
+                          false) &&
+                         !inGdnIframe &&
+                         !inYahooSecureIframe &&
+                         !inSafeFrame &&
+                         !inWinLiveIframe) ||
+                        (true && breakoutIframe == 'true')) &&
+                       self != top &&
+                       !creativeDto.isPreviewEnvironment &&
+                       breakoutIframe != 'false';
+
+  if (adServerData.tag.adContainerElementId == '' &&
+      (true || false ||
+         adServerData.tag.renderFloatInplace)) {
+    var containerId = ['creative', creativeDto.uniqueId].join('_');
+    var divHtml = ['<div id="', containerId, '"></div>'].join('');
+    document.write(divHtml);
+    adServerData.tag.adContainerElementId = containerId;
+    adServerData.generatedAdSlot = true;
+  }
+  var creatives = studioObjects['creatives'] = studioObjects['creatives'] || {};
+  var creative = creatives[creativeKey] = creatives[creativeKey] || {};
+  var adResponses = creative['adResponses'] = creative['adResponses'] || [];
+  creative['shouldBreakout'] = creative['shouldBreakout'] || shouldBreakout;
+  var iframeBusterLibrary = renderingScriptPath + '/iframe_buster_' +
+      versionPrefix + templateVersion + '.js';
+  if(!/^https?:/.test(iframeBusterLibrary)) {
+    iframeBusterLibrary = staticResourceMediaServer + iframeBusterLibrary;
+  }
+  var loadedLibraries = studioObjects['loadedLibraries'] = studioObjects['loadedLibraries'] || {};
+  var versionedLibrary = loadedLibraries[templateVersion] = loadedLibraries[templateVersion] || {};
+  var typedLibrary = versionedLibrary[rendererName] = versionedLibrary[rendererName] || {};
+  adResponses.push({
+    creativeDto: creativeDto
+  });
+  for (var i = 0; i < eventTags['js_event_tag'].length; i++) {
+    document.write('<scr' + 'ipt type="text/javascript" src="' + eventTags['js_event_tag'][i] + '"></scr' + 'ipt>');
+  }
+  if (shouldBreakout) {
+    if (versionedLibrary['breakout']) {
+      versionedLibrary['breakout']();
+    } else if (!versionedLibrary['breakoutLoading']) {
+      versionedLibrary['breakoutLoading'] = true;
+      document.write('<scr' + 'ipt type="text/javascript" src="' + iframeBusterLibrary + '" async="async"></scr' + 'ipt>');
+    }
+  } else if (typedLibrary['bootstrap'] && creative['creativeDefinition']) {
+    typedLibrary['bootstrap']();
+  } else {
+    if (!creative['definitionLoading']) {
+      creative['definitionLoading'] = true;
+      creativeDto.csiEvents['pb'] = (+new Date);
+      document.write('<scr' + 'ipt type="text/javascript" src="' + creativeDto.creativeDefinitionUrl + '"' + (adServerData.tag.tryToWriteHtmlInline ? '' : ' async="async"') + '></scr' + 'ipt>');
+    }
+    if (!typedLibrary['loading']) {
+      typedLibrary['loading'] = true;
+      creativeDto.csiEvents['gb'] = (+new Date);
+      document.write('<scr' + 'ipt type="text/javascript" src="' + renderingLibrary + '"' + (adServerData.tag.tryToWriteHtmlInline ? '' : ' async="async"') + '></scr' + 'ipt>');
+    }
+  }
+  if (isMsnAjaxIframe) {
+    window.setTimeout("document.close();", 1000);
+  }
+})();
+document.write('\n\x3cnoscript\x3e\n  \x3ca target\x3d\x22_blank\x22 href\x3d\x22https://ad.doubleclick.net/activity;src\x3d3756078;met\x3d1;v\x3d1;pid\x3d116818760;aid\x3d289746321;ko\x3d0;cid\x3d59826436;rid\x3d59715123;rv\x3d8;cs\x3dm;eid1\x3d2027780;ecn1\x3d1;etm1\x3d0;_dc_redir\x3durl?https://adclick.g.doubleclick.net/pcs/click?xai\x3dAKAOjsvOFf_4yc8bsE6MD8ayvob8qcM8x4C9ImNDNSN4mvjOZy_U9OjkSZ5FI4nEtn7yVTxjdMqkEcZEoEsQ5VOmw6O7BW-d_nJ8N9OGoV7QZFSQnNEaA6rmWrZV02Za8zqIS6RaoIwAwldN9A\x26sig\x3dCg0ArKJSzDELoiq4us3wEAE\x26adurl\x3dhttp://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DB2iESD7kiVbnrLdPd-QPkv4HwBISSzdwHAAAAEAEgADgAWIT82LixAWDJhvuGyKOQGYIBF2NhLXB1Yi01NTA1OTA1NTc5NTk5OTA1sgERd3d3Lm1hY3J1bW9ycy5jb226AQlnZnBfaW1hZ2XIAQnaARlodHRwOi8vd3d3Lm1hY3J1bW9ycy5jb20vmALYNsACAuACAOoCGjQ1ODUvbnMubWFjcnVtb3JzL2hvbWVwYWdl-AKD0h6QA6wCmAPgA6gDAeAEAaAGFtgHAA%26num%3D0%26sig%3DAOD64_36xM0yZx75aNKB3_T_wjG7eJRqGg%26client%3Dca-pub-5505905579599905%26adurl%3Dhttps://halfprice.sprint.com/\x22\x3e\n    \x3cimg border\x3d\x220\x22 alt\x3d\x22\x22 src\x3d\x22//s0.2mdn.net/ads/richmedia/studio/pv2/34202037/20150330122051075/Sprint_DA4DD06_ZMOT_300x600_endframe.jpg\x22\n        width\x3d\x22300\x22 height\x3d\x22600\x22 /\x3e\n  \x3c/a\x3e\n  \x3cimg width\x3d\x220px\x22 height\x3d\x220px\x22 style\x3d\x22visibility:hidden\x22 border\x3d\x220\x22 alt\x3d\x22\x22\n       src\x3d\x22https://ad.doubleclick.net/activity;src\x3d3756078;met\x3d1;v\x3d1;pid\x3d116818760;aid\x3d289746321;ko\x3d0;cid\x3d59826436;rid\x3d59715123;rv\x3d8;\x26timestamp\x3d2596292223;eid1\x3d9;ecn1\x3d1;etm1\x3d0;\x22 /\x3e\n  \n\x3c/noscript\x3e\n');(function(){var f=function(a,c,b){return a.call.apply(a.bind,arguments)},g=function(a,c,b){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var b=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(b,d);return a.apply(c,b)}}return function(){return a.apply(c,arguments)}},k=function(a,c,b){k=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?f:g;return k.apply(null,arguments)};var l=document,m=window;var n=function(a){return{visible:1,hidden:2,prerender:3,preview:4}[a.webkitVisibilityState||a.mozVisibilityState||a.visibilityState||""]||0},p=function(a){var c;a.mozVisibilityState?c="mozvisibilitychange":a.webkitVisibilityState?c="webkitvisibilitychange":a.visibilityState&&(c="visibilitychange");return c};var r=function(){this.g=l;this.j=m;this.i=!1;this.h=[];this.m={};if(3==n(this.g)){var a=k(this.o,this);this.n=a;var c=this.g,b=p(this.g);c.addEventListener?c.addEventListener(b,a,!1):c.attachEvent&&c.attachEvent("on"+b,a)}else q(this)};r.p=function(){return r.l?r.l:r.l=new r};var s=/^([^:]+:\/\/[^/]+)/m,t=/^\d*,(.+)$/m,q=function(a){if(!a.i){a.i=!0;for(var c=0;c<a.h.length;++c)a.k.apply(a,a.h[c]);a.h=[]}};r.prototype.q=function(a,c){var b=c.target.t();(b=t.exec(b))&&(this.m[a]=b[1])};r.prototype.k=function(a,c){var b;if(b=this.s)i:{try{var d=s.exec(this.j.location.href),e=s.exec(a);if(d&&e&&d[1]==e[1]&&c){var h=k(this.q,this,c);this.s(a,h);b=!0;break i}}catch(y){}b=!1}b||(b=this.j,b.google_image_requests||(b.google_image_requests=[]),d=b.document.createElement("img"),d.src=a,b.google_image_requests.push(d))};r.prototype.o=function(){if(3!=n(this.g)){q(this);var a=this.g,c=p(this.g),b=this.n;a.removeEventListener?a.removeEventListener(c,b,!1):a.detachEvent&&a.detachEvent("on"+c,b)}};var u=function(a,c){var b=/(google|doubleclick).*\/pagead\/adview/.test(a),d=r.p(),e=a;if(b){b="&vis="+n(d.g);c&&(b+="&ve=1");var h=e.indexOf("&adurl"),e=-1==h?e+b:e.substring(0,h)+b+e.substring(h)}d.i?d.k(e,c):d.h.push([e,c])},v=["pdib"],w=this;v[0]in w||!w.execScript||w.execScript("var "+v[0]);for(var x;v.length&&(x=v.shift());)v.length||void 0===u?w=w[x]?w[x]:w[x]={}:w[x]=u;})();pdib("https://googleads4.g.doubleclick.net/pcs/view?xai\x3dAKAOjsvOFf_4yc8bsE6MD8ayvob8qcM8x4C9ImNDNSN4mvjOZy_U9OjkSZ5FI4nEtn7yVTxjdMqkEcZEoEsQ5VOmw6O7BW-d_nJ8N9OGoV7QZFSQnNEaA6rmWrZV02Za8zqIS6RaoIwAwldN9A\x26sig\x3dCg0ArKJSzB6dbX2nm8-pEAE\x26adurl\x3d");
